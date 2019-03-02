@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content="Nova,Hexo,Blog">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          Nova的博客 | QQ Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://www.quartz.ren/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('/img/header_img/home-bg-2-dark.png') 
+            /*config*/
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/BeanTechSign-white.png');
+    }
+    
+</style>
+
+<header class="intro-header">
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="site-heading">
+                        <h1>Nova Blog</h1>
+                        <!--<hr class="small">-->
+                        <span class="subheading">To Be A Lean Developer!</span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Nova Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            
+                <!-- Main Content -->
+
+
+<div class="post-preview">
+
+    <a href="/2018/09/15/fastext4j-encode-problem/">
+        <h2 class="post-title">
+            FastText4j相关字符编码问题
+        </h2>
+        <h3 class="post-subtitle">
+            fastText4j
+        </h3>
+        <div class="post-content-preview">
+            编码
+编码问题主要是在于数据在处理过程中,到底加载成什么样子,是不是期望的01长度序列,或者字节长度.
+比如: 对于输入字符串(或者一句话)的处理,每一个字符到底占用多少个字节.
+编码不一致导致问题出现的根源在于一下几个方面:
+
+输入的字符串本身的编码和读取时指定的编码(将byte数组转出String)不一致
+一些程序处理时用的统一编码方式,所以会进行转换,这里的规则和流程是否清楚
+
+比如在......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Nova on
+            2018-09-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#fasttext" title="fasttext">fasttext</a>
+            
+              <a href="/tags/#ML" title="ML">ML</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/08/18/fasttext-001/">
+        <h2 class="post-title">
+            FastText原理探索
+        </h2>
+        <h3 class="post-subtitle">
+            What is fastText
+        </h3>
+        <div class="post-content-preview">
+            Facebook于2016年开源的一个词向量计算和文本分类工具。
+它的有点非常明显，在文本分类任务中,fasttext(浅层网络)往往能取得和深度网络相媲美的精度，却在训练时间上比深度网络快许多数量级。
+预备知识
+softmax、ngram、word2vec原理
+之后在介绍fasttext的原理、使用keras搭建简单的分类器
+1. softmax
+softmax回归又被称作多项逻辑回归，它......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Nova on
+            2018-08-18
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#fasttext" title="fasttext">fasttext</a>
+            
+              <a href="/tags/#ML" title="ML">ML</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/04/26/nlp_start/">
+        <h2 class="post-title">
+            NLP简单入门
+        </h2>
+        <h3 class="post-subtitle">
+            NLP introduction
+        </h3>
+        <div class="post-content-preview">
+            NLP (Natural Language Processing) 是人工智能（AI）的一个子领域。研究如何让计算机读懂人类语言。
+首先，在这里介绍下NLP的应用级别入门，了解一些基本的概念、应用场景，学会使用之后，再去深究其中的技术实现和算法原理。
+
+能做什么
+一些相关概念
+NLP自定义：像自定义语料等
+现有NLP库
+百度的自然语言处理服务API
+书籍推荐
+
+能做什么
+简单的例子：百度搜索......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Nova on
+            2018-04-26
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#NLP" title="NLP">NLP</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/04/12/cpu-load/">
+        <h2 class="post-title">
+            系统load average详解及问题排查思路
+        </h2>
+        <h3 class="post-subtitle">
+            load average
+        </h3>
+        <div class="post-content-preview">
+            load average指的是top命令输出的表示系统负载的展示项。
+有三个值：load average: 18.89, 17.93, 16.33。他们表示系统平均负载。
+系统平均负载被定义为特定时间间隔内运行队列中的平均进程数。
+如果一个进程满足以下条件则其就会位于运行队列中：
+
+它没有再等待I/O操作的结果
+它没有主动进入等待状态（也就是没有调用wait）
+没有被停止（例如：等待终止）
+......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Nova on
+            2018-04-12
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Linux" title="Linux">Linux</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/03/16/blockchain_start/">
+        <h2 class="post-title">
+            区块链简单入门
+        </h2>
+        <h3 class="post-subtitle">
+            BlockChain
+        </h3>
+        <div class="post-content-preview">
+            区块链是最近比较火的一个技术，他的诞生已经有很长一段时间。那区块链到底是什么？他真的很难理解吗？下面，简单的了解以下区块链。
+其实，区块链的核心概念也非常简单，没有想象中的难。通过本文，不仅可以理解区块链，还会明白什么是挖矿，为什么挖矿越来越难等问题。
+区块链本质
+区块链什么？它是一种特殊的分布式数据库。
+首先，区块链的主要作用是存储信息。任何需要保存的信息，都可以写入区块链，也可以从里面读......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Nova on
+            2018-03-16
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#BlockChain" title="BlockChain">BlockChain</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2018/03/06/like_me/">
+        <h2 class="post-title">
+            Someone Like ME
+        </h2>
+        <h3 class="post-subtitle">
+            What is The Life
+        </h3>
+        <div class="post-content-preview">
+            0306
+多少个三年，又是一个三年，看不见的成长，看得见的消亡。不知所措到无能为力。留下的还仅有一部分向前的意愿。OK，看得见即已是一种成长。目前能做的也就是去完成这个向前的愿望。让自己变得更优秀，想在去MT之后告诉你，曾经最喜欢的是活泼，耿直的你。sorry  for  so  many  years。
+0307
+陈洁开玩笑说：像你这样的人，活该没有小女朋友。
+她总是会精确的评价出我的一些......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Nova on
+            2018-03-06
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#生活" title="生活">生活</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/11/25/be-an-actor/">
+        <h2 class="post-title">
+            成为一名演员，做好一名老师
+        </h2>
+        <h3 class="post-subtitle">
+            The Interpretation of Life
+        </h3>
+        <div class="post-content-preview">
+            
+这个社会如果人不能学会展现自己，在事业和生活上都只会是失败的。
+
+今天在简书上看到这句话，身受同感。
+小时候，我们想读研究生，我们想当科学家，我们想当艺术家、音乐家。又或者我们一直会是名列前茅的佼佼者。
+到后来，慢慢发现其实我们之前一些在意的并不是那么重要，我们也只是在几种平凡的角色上折腾一生。
+然而今天，我们是要像小时候戏精一样的告诉大家我的理想是什么，还是选择将平凡的生活埋藏起来。对故......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Nova on
+            2017-11-25
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#生活" title="生活">生活</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/11/24/es-learning-guide/">
+        <h2 class="post-title">
+            ElasticSearch学习指南
+        </h2>
+        <h3 class="post-subtitle">
+            Elasticsearch Learning Guide
+        </h3>
+        <div class="post-content-preview">
+            Es是目前主流的开源搜索引擎之一，它的用途还是很广泛的。我接触Es是在想实践下Skyeye（分布式应用监控及日志采集项目）的时候。项目中使用Es索引日志，提供可视化的日志搜索功能以及生产日志实时滚动。
+Es不仅用于日志索引、日志分析，还一般用于商品网站的商品搜索以及其它应用级别的搜索功能实现等等。那它为什么有这么强大的功能的，它和数据库相比有哪些优势，又有哪些劣势。我们来认识一下这个主流的搜......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Nova on
+            2017-11-24
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Elasticsearch" title="Elasticsearch">Elasticsearch</a>
+            
+              <a href="/tags/#分词" title="分词">分词</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/10/12/nodejs-env/">
+        <h2 class="post-title">
+            Nodejs环境搭建
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            搭建过NodeJs环境的都知道node的版本等问题导致node环境会有各种问题。
+在这里总结下，顺便对node有一个清楚的认识。
+以搭建hexo环境为例
+Node环境说明及搭建
+
+node环境搭建有两种方式
+
+使用离线包安装
+使用nvm管理node版本
+
+搭建过程中注意：稳定的node版本，版本管理。保持node版本和npm版本对应。
+使用离线包安装
+此方法是自己下载node的稳定版本，自定......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Nova on
+            2017-10-12
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#NodeJs" title="NodeJs">NodeJs</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/2017/03/18/hexo-theme-beantech/">
+        <h2 class="post-title">
+            [Hexo] Theme BeanTech
+        </h2>
+        <h3 class="post-subtitle">
+            This is hexo theme Demo.
+        </h3>
+        <div class="post-content-preview">
+            
+Ported Theme of Hux Blog, Thank Huxpro for designing such a flawless theme.
+This BeanTech theme created by YuHsuan modified from the original Porter Kaijun
+
+
+
+
+Usage
+
+I publish the whole project f......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by Nova on
+            2017-03-18
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Hexo" title="Hexo">Hexo</a>
+            
+              <a href="/tags/#Blog" title="Blog">Blog</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+
+
+<!-- Pager -->
+
+<ul class="pager">
+    
+    
+        <li class="next">
+            <a href="/archives/2/">Older Posts &rarr;</a>
+        </li>
+    
+</ul>
+
+
+
+                <!-- 如果开启评论功能 -->
+                
+            </div>
+
+          <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        <!-- Featured Tags -->
+
+<section>
+    <!-- no hr -->
+    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+            
+        
+            
+            <a href="/tags/#Linux" title="Linux" rel="2">Linux</a>
+            
+        
+            
+            <a href="/tags/#生活" title="生活" rel="2">生活</a>
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#fasttext" title="fasttext" rel="2">fasttext</a>
+            
+        
+            
+            <a href="/tags/#ML" title="ML" rel="2">ML</a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+</section>
+
+        <hr>
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+    <h5><a href="/about/">ABOUT ME</a></h5>
+    <div class="short-about">
+
+        
+            <img id="avatar_pic" src="/img/avatar.jpg">
+        
+
+        
+            <p>我要成为魔法师!</p>
+        
+
+        <!-- SNS Link -->
+        <ul class="list-inline">
+            
+            
+            
+                <li>
+                    <a target="_blank" href="https://www.zhihu.com/people/quanquan.cs">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa  fa-stack-1x fa-inverse">知</i>
+                        </span>
+                    </a>
+                </li>
+            
+
+            
+                <li>
+                    <a target="_blank" href="http://weibo.com/quincyzh">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+
+            
+
+            
+                <li>
+                    <a target="_blank" href="https://github.com/quantumcs">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+            
+            
+            
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/韵-张-3978b4110">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+</section>
+        <hr>
+    
+        
+  <h5>RECENT POSTS
+  <div class="widget">
+    <ul>
+      
+        <li>
+          <a href="/2018/09/15/fastext4j-encode-problem/">FastText4j相关字符编码问题</a>
+        </li>
+      
+        <li>
+          <a href="/2018/08/18/fasttext-001/">FastText原理探索</a>
+        </li>
+      
+        <li>
+          <a href="/2018/04/26/nlp_start/">NLP简单入门</a>
+        </li>
+      
+        <li>
+          <a href="/2018/04/12/cpu-load/">系统load average详解及问题排查思路</a>
+        </li>
+      
+        <li>
+          <a href="/2018/03/16/blockchain_start/">区块链简单入门</a>
+        </li>
+      
+    </ul>
+  </div>
+</h5>
+        <hr>
+    
+        <!-- Friends Blog -->
+
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+
+    
+        <li><a href="http://beantech.org" target="_blank">Bean Tech</a></li>
+    
+        <li><a href="http://blog.kaijun.rocks" target="_blank">Kaijun&#39;s Blog</a></li>
+    
+        <li><a href="#" target="_blank">It Helps SEO</a></li>
+    
+</ul>
+
+        <hr>
+    
+</div>
+
+        
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/quanquan.cs">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/quincyzh">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/quantumcs">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/韵-张-3978b4110">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Nova 2019 
+                    <br>
+                    Theme by <a href="https://github.com/huxpro/huxpro.github.io/">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    <!-- re-Ported by <a href="">BeanTech</a>
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://github.com/huxpro/huxpro.github.io/" >
+                    </iframe> -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://www.quartz.ren/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '9088151460061a7c449bb9d5a3209fbc';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="https://www.quartz.ren/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
