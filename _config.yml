@@ -164,7 +164,7 @@ markdown:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: jekyll-theme-slate
+theme: beantech
 
 #sitemap
 sitemap:
