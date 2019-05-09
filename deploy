@@ -1,0 +1,5 @@
+rm -rf /data/app/html-deploy/*
+cp -r /data/app/html-source/blog/quantumcs.github.io/public/* /data/app/html-deploy/
+
+mkdir /data/app/html-deploy/wiki/
+cp -r /data/app/html-source/wiki/public/* /data/app/html-deploy/wiki/
