@@ -1,0 +1,4 @@
+git pull origin env
+git add .
+git commit -m 'mod post'
+git push origin env

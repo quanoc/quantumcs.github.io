@@ -19,11 +19,12 @@ permalink_defaults:
 #Custom Setting Start
 
 # Site settings
-SEOTitle: Nova的博客 | QQ Blog
+SEOTitle: xiaodong的博客 | Nova Blog
 email: zhangquanquan@tom.com
 description: ""
 keyword: "Nova,Hexo,Blog"
-header-img: img/header_img/home-bg-2-dark.png
+#header-img: img/header_img/home-bg-2-dark.png
+header-img: img/bj001.jpg
 signature: true #show signature
 signature-img: img/signature/BeanTechSign-white.png 
 
@@ -84,6 +85,9 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 ## Friends
 friends: [
     {
+        title: "My Wiki",
+        href: "https://www.quartz.ren/wiki/"
+    },{
         title: "Bean Tech",
         href: "http://beantech.org"
     },{

@@ -4,7 +4,7 @@ title:      "对抗熵增的底层思维"
 subtitle:   ""
 date:       2017-11-25
 author:     "Nova"
-header-img: "home-bg-o.jpg"
+header-img: "/img/home-bg-o.jpg"
 tags:
     - 生活
 ---
