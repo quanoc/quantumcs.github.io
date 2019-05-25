@@ -5,10 +5,10 @@ subtitle:   "What is fastText"
 date:       2018-08-18
 catalog:    true
 author:     "Nova"
-header-img: "post-bg-fasttext-001.jpg"
+header-img: "/img/post-img/0003.jpg"
 tags:
     - fasttext
-    - ML
+    - NLP
 ---
 
 Facebook于2016年开源的一个**词向量计算**和**文本分类**工具。
