@@ -1,3 +1,5 @@
+hexo clean
+hexo g
 rm -rf /data/app/html-deploy/*
 cp -r /data/app/html-source/blog/quantumcs.github.io/public/* /data/app/html-deploy/
 
