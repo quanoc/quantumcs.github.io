@@ -5,7 +5,7 @@ subtitle:   "NLP introduction"
 date:       2018-04-26
 catalog:    true
 author:     "Nova"
-header-img: "post-bg-es-learn.jpg"
+header-img: "/img/post-img/0003.jpg"
 tags:
     - NLP
 ---

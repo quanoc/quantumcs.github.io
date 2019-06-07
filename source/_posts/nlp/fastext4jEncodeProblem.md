@@ -5,10 +5,10 @@ subtitle:   "fastText4j"
 date:       2018-09-15
 catalog:    true
 author:     "Nova"
-header-img: "post-bg-fasttext-001.jpg"
+header-img: "/img/post-img/0003.jpg"
 tags:
     - fasttext
-    - ML
+    - NLP
 ---
 
 ## 编码
