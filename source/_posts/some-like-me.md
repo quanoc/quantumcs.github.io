@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Someone Like ME"
+title:      "像我这样的人"
 subtitle:   "What is The Life"
 date:       2018-03-06
 catalog:    true
@@ -40,9 +40,6 @@ description: What is The Life
 
 0820
 旅行是既不安全也不舒适的，但它能带给我们流光溢彩、繁花似锦的世界。。。
-
-1008
-张小东，你要认真你就输了，清醒一点吧。你该做什么，不该做什么，不可以那么随意了。好吧，我感觉脑(lao)子有问题了～
 
 1014
 慢慢平静下来,尝试和你保持距离,不想破坏这份友谊,希望你保持活力,一切安好~
