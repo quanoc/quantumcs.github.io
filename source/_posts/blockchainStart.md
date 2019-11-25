@@ -2,10 +2,12 @@
 layout:     post
 title:      "区块链简单入门"
 subtitle:   "BlockChain"
-date:       2018-03-16
+date:       2018-03-16 20:20:00
 catalog:    true
 author:     "Nova"
 header-img: "bj001.jpg"
+avatar: /images/favicon.ico
+categories: 其它
 tags:
     - BlockChain
 ---
@@ -32,6 +34,8 @@ tags:
 
 
 带着以下问题继续深入。
+
+<!--more-->
 
 ### 区块链最大特点
 
